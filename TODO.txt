@@ -1,0 +1,14 @@
+-- scheme drawing using PCAD 
+
+-- PCB tracing using PCAD
+
+-- PCB manufacturing order
+
+-- assembling
+
+-- updating CPLD configuration (mockup design will be different for pin planner)
+
+-- add fearture to MC firmware: CPLD configuration by MC via JTAG pins 
+   (I have few projects like that and will adapte one of them)
+   Note: it required to connect MC to host (PC) via UART.
+
