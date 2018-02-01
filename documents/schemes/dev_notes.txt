@@ -1,0 +1,79 @@
+ATmega168+EPM3064
+~~~~~~~~~~~~~~~~~
+connector 4 2.54 (ps/2)
+connector          2 x 16 2.54 -- [+5V, GND, 1 pin open drain, 13 CPLD pins]
+                                  [CPLD: 13 pins, 1 pin open drain] open drain connected to either MC or CPLD
+connector (MC)
+jtag connector     2 x 3  1.27
+avr prog connector 2 x 3  1.27
+
+
+
+LED power
+LED MC
+LED CPLD
+
+open drain (transistor, > 5V?)  x 2 ?
+
+connector (pins) for UART (RX,TX,GND)
+
+CPLD pins (26 i/o):
+-- cpld_cs   <-- MC
+-- cpld_clk  <-- MC
+-- cpld_di   <-- MC
+-- cpld_do   <-- MC
+-- jtag_tms  <-- MC
+-- jtag_clk  <-- MC
+-- jtag_tdi  <-- MC
+-- jtag_tdo  <-- MC
+-- i/o 1..26 <-> connector
+shared pind
+-- i/o 1     --> open drain
+-- i/o 2     --> open drain
+
+
+
+-------------------------------------------------------------------------------
+pin_atmega168 and ML811
+~~~~~~~~~~~~~~~~~~~~~~~
+
+PD0 -- RxD
+PD1 -- TxD
+PD2                ml_irq
+PD3                ml_rst
+PD4                ml_a0
+PD5                ml_cs
+PD6                ml_D6
+PD7                ml_D7
+
+
+PB0    cpld_cs
+PB1    cpld_clk    ml_rd       
+PB2    cpld_di     ml_rw
+PB3 -- mosi
+PB4 -- miso
+PB5 -- sck
+PB6 -- xtal1
+PB7 -- xtal2
+
+
+PC0                ml_D0
+PC1                ml_D1
+PC2                ml_D2
+PC3                ml_D3
+PC4                ml_D4
+PC5                ml_D5
+PC6 -- reset/debug
+
+
+ML811
+
+D0..D7
+A0
+RD
+WR
+RST
+IRQ
+CS
+-------------------------------------------------------------------------------
+
