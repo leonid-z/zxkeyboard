@@ -1,23 +1,26 @@
-ATmega168+EPM3064
-~~~~~~~~~~~~~~~~~
-connector 4 2.54 (ps/2)
-connector          2 x 16 2.54 -- [+5V, GND, 1 pin open drain, 13 CPLD pins]
-                                  [CPLD: 13 pins, 1 pin open drain] open drain connected to either MC or CPLD
-connector (MC)
-jtag connector     2 x 3  1.27
-avr prog connector 2 x 3  1.27
+ATmega168 + EPM3064
+~~~~~~~~~~~~~~~~~~~
+Connectors
+----------
+1) 4 pins 2.54 (ps/2)
+2) 13(26) pins  2 x 16 2.54 -- [+5V, GND, 1 pin open drain, 13 CPLD pins]
+                               [CPLD: 13 pins, 1 pin open drain] open drain connected to either MC or CPLD
+3) jtag      2 x 3  1.27
+4) avr prog  2 x 3  1.27
+5) (pins) for UART (RX,TX,GND)
 
-
+Units:
+------
 
 LED power
-LED MC
-LED CPLD
+LED MC 5.0 V
+LED CPLD 3.3 V
+LM1117-3.3
 
 open drain (transistor, > 5V?)  x 2 ?
 
-connector (pins) for UART (RX,TX,GND)
-
 CPLD pins (26 i/o):
+CPLD / MC interface:
 -- cpld_cs   <-- MC
 -- cpld_clk  <-- MC
 -- cpld_di   <-- MC
@@ -31,11 +34,19 @@ shared pind
 -- i/o 1     --> open drain
 -- i/o 2     --> open drain
 
+MC pins:
+PD0 -- RxD
+PD1 -- TxD
+
+ADC?
+1W (with 4.7K pull up)?
+
+MC pins unused: connet to connector 2 x 16 ?
 
 
 -------------------------------------------------------------------------------
-pin_atmega168 and ML811
-~~~~~~~~~~~~~~~~~~~~~~~
+pin_atmega168 + EPM3064 + ML811
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 PD0 -- RxD
 PD1 -- TxD
