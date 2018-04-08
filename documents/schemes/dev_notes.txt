@@ -41,7 +41,7 @@ PD1 -- TxD
 ADC?
 1W (with 4.7K pull up)?
 
-MC pins unused: connet to connector 2 x 16 ?
+MC pins unused: connect to connector 2 x 16 ?
 
 
 -------------------------------------------------------------------------------
